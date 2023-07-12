@@ -4,9 +4,13 @@ description: Customise your web projects with our easy-to-use switch component f
 navigation:
   [
     "switch",
+    "checked-switch",
     "switch-colors",
     "switch-with-label",
     "switch-ripple-effect",
+    "disabled-switch",
+    "switch-with-description",
+    "switch-with-custom-styles",
     "props",
     "theme",
   ]
@@ -24,7 +28,7 @@ related:
     },
   ]
 github: switch
-prev: select
+prev: stepper
 next: tabs
 ---
 
@@ -36,7 +40,25 @@ See below our example that will help you create simple and easy-to-use <Code>Swi
 
 <br />
 
-<CodePreview id="switch" link="switch#switch" component={<Switch id="switch-component" defaultChecked />}>
+<CodePreview id="switch" link="switch#switch" component={<Switch id="switch-component" />}>
+```jsx
+import { Switch } from "@material-tailwind/react";
+
+export default function Example() {
+  return <Switch />;
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="checked-switch">
+## Checked Switch
+</DocsTitle>
+
+Make a <Code>Switch</Code> component checked by default using the <Code>defaultChecked</Code> props.
+
+<CodePreview id="checked-switch" component={<Switch id="checked-switch-component" defaultChecked />}>
 ```jsx
 import { Switch } from "@material-tailwind/react";
 
@@ -48,7 +70,9 @@ export default function Example() {
 
 ---
 
+<DocsTitle href="switch-colors">
 ## Switch Colors
+</DocsTitle>
 
 The <Code>Switch</Code> component comes with 19 different colors that you can change it using the <Code>color</Code> prop.
 
@@ -67,7 +91,7 @@ The <Code>Switch</Code> component comes with 19 different colors that you can ch
 ```jsx
 import { Switch } from "@material-tailwind/react";
 
-export default function Colors() {
+export default function Example() {
   return (
     <div className="flex w-max gap-4">
       <Switch id="blue" color="blue" defaultChecked />
@@ -86,7 +110,9 @@ export default function Colors() {
 
 ---
 
+<DocsTitle href="switch-with-label">
 ## Switch with Label
+</DocsTitle>
 
 You can add a label for the <Code>Switch</Code> component by passing the <Code>label</Code> prop to the <Code>Switch</Code> component.
 
@@ -104,7 +130,9 @@ export default function Example() {
 
 ---
 
+<DocsTitle href="switch-ripple-effect">
 ## Switch Ripple Effect
+</DocsTitle>
 
 You can turn on/off the ripple effect for the <Code>Switch</Code> component using the <Code>ripple</Code> prop.
 
@@ -128,5 +156,102 @@ export default function Example() {
 ```
 </CodePreview>
 
+---
+
+<DocsTitle href="disabled-switch">
+## Disabled Switch
+</DocsTitle>
+
+You can make a switch disable by passing the <Code>disabled</Code> prop to the <Code>Switch</Code> component.
+
+<CodePreview id="disabled-switch" component={
+  <Switch id="switch-disabled" disabled={true} />
+}>
+```jsx
+import { Switch } from "@material-tailwind/react";
+
+export default function Example() {
+  return <Switch disabled={true} />;
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="switch-with-description">
+## Switch with Description
+</DocsTitle>
+
+Use the example below for a more complex usage of switch with label that contains some description.
+
+<CodePreview id="switch-with-description" component={
+  <Switch
+    id="switch-description"
+    label={
+      <div>
+        <Typography color="blue-gray" className="font-medium">Remember Me</Typography>
+        <Typography variant="small" color="gray" className="font-normal">
+          You'll be able to login without password for 24 hours.
+        </Typography>
+      </div>
+    } 
+    containerProps={{
+      className: "-mt-5"
+    }}
+  />
+}>
+```jsx
+import { Switch } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <Switch
+      label={
+        <div>
+          <Typography color="blue-gray" className="font-medium">Remember Me</Typography>
+          <Typography variant="small" color="gray" className="font-normal">
+            You'll be able to login without password for 24 hours.
+          </Typography>
+        </div>
+      } 
+      containerProps={{
+        className: "-mt-5"
+      }}
+    />
+  );
+}
+```
+</CodePreview>
+
 <span id="props" className="scroll-mt-48" />
 <span id="theme" className="scroll-mt-48" />
+
+---
+
+<DocsTitle href="switch-with-custom-styles">
+## Switch with Custom Styles
+</DocsTitle>
+
+You can use the <Code>className</Code>, <Code>containerProps</Code>, <Code>circleProps</Code> and <Code>labelProps</Code> prop to add custom styles to the <Code>Switch</Code> component.
+
+<CodePreview id="switch-with-custom-styles" component={
+  <Switch
+    id="custom-switch-component"
+    ripple={false}
+    className="w-full h-full checked:bg-[#2ec946]"
+    containerProps={{
+      className: "w-11 h-6"
+    }}
+    circleProps={{
+      className: "before:hidden left-0.5 border-none",
+    }}
+  />
+}>
+```jsx
+import { Switch } from "@material-tailwind/react";
+
+export default function Example() {
+  return <Switch />;
+}
+```
+</CodePreview>

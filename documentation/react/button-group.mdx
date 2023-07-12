@@ -1,0 +1,355 @@
+---
+title: Tailwind CSS Button Group for React - Material Tailwind
+description: Customise your web projects with our easy-to-use button group component for Tailwind CSS and React using Material Design guidelines.
+navigation:
+  [
+    "button-group",
+    "button-group-variants",
+    "button-group-sizes",
+    "button-group-colors",
+    "block-level-button-group",
+    "button-group-ripple-effect",
+    "button-group-with-custom-styles",
+    "props",
+    "theme",
+  ]
+related:
+  [
+    {
+      title: "Props",
+      route: "props/button-group",
+      description: "Learn more about props definition and types of button group component.",
+    },
+    {
+      title: "Theme",
+      route: "theme/button-group",
+      description: "Learn how to customize the theme and styles for button group component.",
+    },
+  ]
+github: button
+prev: button
+next: card
+---
+
+# Tailwind CSS Button Group - React
+
+Use our <Code>ButtonGroup</Code> based on Tailwind CSS for actions.
+
+<Code>ButtonGroup</Code> is an essential element of web design. Basically,
+<Code>ButtonGroup</Code> is stack of buttons. They help users navigate our websites
+or apps and drive them to a particular action.
+
+See below our <Code>ButtonGroup</Code> example that you can use in your Tailwind CSS and React project. The example also comes in different styles and colors, so you can adapt it easily to your needs.
+
+<br />
+
+<CodePreview id="button-group" component={
+  <ButtonGroup>
+    <Button>One</Button>
+    <Button>Two</Button>
+    <Button>Three</Button>
+  </ButtonGroup>
+}>
+```jsx
+import { ButtonGroup, Button } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <ButtonGroup>
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+  );
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="button-group-variants">
+## Button Group Variants
+</DocsTitle>
+
+The <Code>ButtonGroup</Code> component comes with 4 different variants that you can change it using the <Code>variant</Code> prop.
+
+<CodePreview id="button-group-variants" component={
+  <div className="flex flex-col w-max gap-4">
+    <ButtonGroup>
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+    <ButtonGroup variant="gradient">
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+    <ButtonGroup variant="outlined">
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+    <ButtonGroup variant="text">
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+  </div>
+}>
+```jsx
+import { ButtonGroup, Button } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <div className="flex flex-col w-max gap-4">
+      <ButtonGroup>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup variant="gradient">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup variant="outlined">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup variant="text">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+    </div>
+  );
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="button-group-sizes">
+## Button Group Sizes
+</DocsTitle>
+
+The <Code>ButtonGroup</Code> component comes with 3 different sizes that you can change it using the <Code>size</Code> prop.
+
+<CodePreview id="button-group-sizes" component={
+  <div className="flex flex-col w-max gap-4">
+    <ButtonGroup size="sm">
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+    <ButtonGroup size="md">
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+    <ButtonGroup size="lg">
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+  </div>
+}>
+```jsx
+import { ButtonGroup, Button } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <div className="flex flex-col w-max gap-4">
+      <ButtonGroup size="sm">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup size="md">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup size="lg">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+    </div>
+  );
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="button-group-colors">
+## Button Group Colors
+</DocsTitle>
+
+The <Code>ButtonGroup</Code> component comes with 19 different colors that you can change it using the <Code>color</Code> prop.
+
+<CodePreview id="button-group-colors" component={
+  <div className="flex flex-col w-max gap-4">
+    <ButtonGroup color="blue">
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+    <ButtonGroup color="red">
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+    <ButtonGroup color="green">
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+    <ButtonGroup color="amber">
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+  </div>
+}>
+```jsx
+import { ButtonGroup, Button } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <div className="flex flex-col w-max gap-4">
+      <ButtonGroup color="blue">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup color="red">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup color="green">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup color="amber">
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+    </div>
+  );
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="block-level-button-group">
+## Block Level Button Group
+</DocsTitle>
+
+A <Code>ButtonGroup</Code> could be a block level component as well that get's all the available space in a row. You can render a <Code>ButtonGroup</Code> as a block level element using the <Code>fullWidth</Code> prop.
+
+<CodePreview id="block-level-button-group" component={
+  <ButtonGroup fullWidth={true}>
+    <Button>One</Button>
+    <Button>Two</Button>
+    <Button>Three</Button>
+  </ButtonGroup>
+}>
+```jsx
+import { ButtonGroup, Button } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <ButtonGroup fullWidth={true}>
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+  )
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="button-group-ripple-effect">
+## Button Group Ripple Effect
+</DocsTitle>
+
+You can turn on/off the ripple effect for the <Code>ButtonGroup</Code> component using the <Code>ripple</Code> prop.
+
+<CodePreview id="button-group-ripple-effect" component={
+  <div className="flex flex-col w-max gap-4">
+    <ButtonGroup ripple={true}>
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+    <ButtonGroup ripple={false}>
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
+  </div>
+}>
+```jsx
+import { ButtonGroup, Button } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <div className="flex flex-col w-max gap-4">
+      <ButtonGroup ripple={true}>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup ripple={false}>
+        <Button>One</Button>
+        <Button>Two</Button>
+        <Button>Three</Button>
+      </ButtonGroup>
+    </div>
+  );
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="button-group-with-custom-styles">
+## Button Group with Custom Styles
+</DocsTitle>
+
+You can use the <Code>className</Code> prop to add custom styles to the <Code>ButtonGroup</Code> component.
+
+<CodePreview id="button-group-with-custom-styles" component={
+  <ButtonGroup className="gap-1 bg-blue-500/25 p-1">
+    <Button className="rounded-none">One</Button>
+    <Button className="rounded-none">Two</Button>
+    <Button className="rounded-none">Three</Button>
+  </ButtonGroup>
+}>
+```jsx
+import { ButtonGroup, Button } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <ButtonGroup className="gap-1 bg-blue-500/25 p-1">
+      <Button className="rounded-none">One</Button>
+      <Button className="rounded-none">Two</Button>
+      <Button className="rounded-none">Three</Button>
+    </ButtonGroup>
+  );
+}
+```
+</CodePreview>
+
+<span id="props" className="scroll-mt-48" />
+<span id="theme" className="scroll-mt-48" />

@@ -5,8 +5,12 @@ navigation:
   [
     "progress-bar",
     "progress-bar-variants",
+    "progress-bar-sizes",
     "progress-bar-colors",
     "progress-bar-with-label",
+    "progress-bar-sizes-with-label",
+    "progress-bar-with-label-outside",
+    "progress-bar-with-custom-styles",
     "props",
     "theme",
   ]
@@ -25,7 +29,7 @@ related:
   ]
 github: progress-bar
 prev: popover
-next: radio-button
+next: pagination
 ---
 
 # Tailwind CSS Progress Bar - React
@@ -48,7 +52,9 @@ export default function Example() {
 
 ---
 
+<DocsTitle href="progress-bar-variants">
 ## Progress Bar Variants
+</DocsTitle>
 
 The <Code>Progress</Code> component comes with 2 different variants that you can change it using the <Code>color</Code> prop.
 
@@ -61,7 +67,7 @@ The <Code>Progress</Code> component comes with 2 different variants that you can
 ```jsx
 import { Progress } from "@material-tailwind/react";
 
-export default function Colors() {
+export default function Example() {
   return (
     <div className="flex w-full flex-col gap-4">
       <Progress value={50} variant="filled" />
@@ -74,7 +80,39 @@ export default function Colors() {
 
 ---
 
+<DocsTitle href="progress-bar-sizes">
+## Progress Bar Sizes
+</DocsTitle>
+
+The <Code>Progress</Code> component comes with 3 different sizes that you can change it using the <Code>size</Code> prop.
+
+<CodePreview id="progress-bar-sizes" component={
+  <div className="flex w-full flex-col gap-4">
+    <Progress value={25} size="sm" />
+    <Progress value={50} size="md" />
+    <Progress value={75} size="lg" />
+  </div>
+}>
+```jsx
+import { Progress } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <div className="flex w-full flex-col gap-4">
+      <Progress value={25} size="sm" />
+      <Progress value={50} size="md" />
+      <Progress value={75} size="lg" />
+    </div>
+  );
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="progress-bar-colors">
 ## Progress Bar Colors
+</DocsTitle>
 
 The <Code>Progress</Code> component comes with 19 different colors that you can change it using the <Code>color</Code> prop.
 
@@ -93,7 +131,7 @@ The <Code>Progress</Code> component comes with 19 different colors that you can 
 ```jsx
 import { Progress } from "@material-tailwind/react";
 
-export default function Colors() {
+export default function Example() {
   return (
     <div className="flex w-full flex-col gap-4">
       <Progress value={50} color="blue" />
@@ -112,7 +150,9 @@ export default function Colors() {
 
 ---
 
+<DocsTitle href="progress-bar-with-label">
 ## Progress Bar with Label
+</DocsTitle>
 
 You can add custom label inside the progress bar using the <Code>label</Code> prop.
 
@@ -122,6 +162,100 @@ import { Progress } from "@material-tailwind/react";
 
 export default function Example() {
   return <Progress value={50} label="Completed" />;
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="progress-bar-sizes-with-label">
+## Progress Bar Sizes with Label
+</DocsTitle>
+
+The <Code>Progress</Code> component sizes are different when you use the <Code>label</Code> prop, this helps to make the label text more readable.
+
+<CodePreview id="progress-bar-sizes-with-label" component={
+  <div className="flex w-full flex-col gap-4">
+    <Progress value={25} size="sm" label="Small" />
+    <Progress value={50} size="md" label="Medium" />
+    <Progress value={75} size="lg" label="Large" />
+  </div>
+}>
+```jsx
+import { Progress } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <div className="flex w-full flex-col gap-4">
+      <Progress value={25} size="sm" label="Small" />
+      <Progress value={50} size="md" label="Medium" />
+      <Progress value={75} size="lg" label="Large" />
+    </div>
+  );
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="progress-bar-with-label-outside">
+## Progress Bar with Label Outside
+</DocsTitle>
+
+Use the example below to add the label outside the progress bar.
+
+<CodePreview id="progress-bar-with-label-outside" component={
+  <div className="w-full">
+    <div className="flex items-center justify-between gap-4 mb-2">
+      <Typography color="blue" variant="h6">Completed</Typography>
+      <Typography color="blue" variant="h6">50%</Typography>
+    </div>
+    <Progress value={50} />
+  </div>
+}>
+```jsx
+import { Progress, Typography } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <div className="w-full">
+      <div className="flex items-center justify-between gap-4 mb-2">
+        <Typography color="blue" variant="h6">Completed</Typography>
+        <Typography color="blue" variant="h6">50%</Typography>
+      </div>
+      <Progress value={50} />
+    </div>
+  );
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="progress-bar-with-custom-styles">
+## Progress Bar with Custom Styles
+</DocsTitle>
+
+You can use the <Code>className</Code> prop to add custom styles to the <Code>Progress</Code> component.
+
+<CodePreview id="progress-bar-with-custom-styles" component={
+  <Progress
+    value={50}
+    size="lg"
+    className="bg-blue-500/10 p-1 border border-blue-500/20"
+  />
+}>
+```jsx
+import { Progress } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <Progress
+      value={50}
+      size="lg"
+      className="bg-blue-500/10 p-1 border border-blue-500/20"
+    />
+  )
 }
 ```
 </CodePreview>

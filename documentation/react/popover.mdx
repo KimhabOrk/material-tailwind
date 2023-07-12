@@ -6,6 +6,9 @@ navigation:
     "popover",
     "popover-placement",
     "custom-popover-animation",
+    "subscription-popover",
+    "contact-popover",
+    "popover-with-image",
     "profile-info-popover",
     "popover-with-description",
     "props",
@@ -40,7 +43,7 @@ See below our simple <Code>Popover</Code> example that you can use in your web p
 <CodePreview id="popover" link="popover#popover" component={
   <Popover>
     <PopoverHandler>
-      <Button variant="gradient">Show Popover</Button>
+      <Button>Show Popover</Button>
     </PopoverHandler>
     <PopoverContent>
       <span>This is a very beautiful popover, show some love.</span>
@@ -59,7 +62,7 @@ export default function Example() {
   return (
     <Popover>
       <PopoverHandler>
-        <Button variant="gradient">Show Popover</Button>
+        <Button>Show Popover</Button>
       </PopoverHandler>
       <PopoverContent>
         This is a very beautiful popover, show some love.
@@ -72,7 +75,9 @@ export default function Example() {
 
 ---
 
+<DocsTitle href="popover-placement">
 ## Popover Placement
+</DocsTitle>
 
 You can change the position of the <Code>Popover</Code> component using the <Code>placement</Code> prop.
 
@@ -81,7 +86,7 @@ You can change the position of the <Code>Popover</Code> component using the <Cod
     <div className="mb-3 flex gap-3">
       <Popover placement="top">
         <PopoverHandler>
-          <Button variant="gradient">Top</Button>
+          <Button>Top</Button>
         </PopoverHandler>
         <PopoverContent>
           <span>This is a very beautiful popover, show some love.</span>
@@ -89,7 +94,7 @@ You can change the position of the <Code>Popover</Code> component using the <Cod
       </Popover>
       <Popover placement="top-start">
         <PopoverHandler>
-          <Button variant="gradient">Top Start</Button>
+          <Button>Top Start</Button>
         </PopoverHandler>
         <PopoverContent>
           <span>This is a very beautiful popover, show some love.</span>
@@ -97,7 +102,7 @@ You can change the position of the <Code>Popover</Code> component using the <Cod
       </Popover>
       <Popover placement="top-end">
         <PopoverHandler>
-          <Button variant="gradient">Top End</Button>
+          <Button>Top End</Button>
         </PopoverHandler>
         <PopoverContent>
           <span>This is a very beautiful popover, show some love.</span>
@@ -107,7 +112,7 @@ You can change the position of the <Code>Popover</Code> component using the <Cod
     <div className="mb-3 flex gap-3">
       <Popover placement="right">
         <PopoverHandler>
-          <Button variant="gradient">Right</Button>
+          <Button>Right</Button>
         </PopoverHandler>
         <PopoverContent>
           <span>This is a very beautiful popover, show some love.</span>
@@ -115,7 +120,7 @@ You can change the position of the <Code>Popover</Code> component using the <Cod
       </Popover>
       <Popover placement="right-start">
         <PopoverHandler>
-          <Button variant="gradient">Right Start</Button>
+          <Button>Right Start</Button>
         </PopoverHandler>
         <PopoverContent>
           <span>This is a very beautiful popover, show some love.</span>
@@ -123,7 +128,7 @@ You can change the position of the <Code>Popover</Code> component using the <Cod
       </Popover>
       <Popover placement="right-end">
         <PopoverHandler>
-          <Button variant="gradient">Right End</Button>
+          <Button>Right End</Button>
         </PopoverHandler>
         <PopoverContent>
           <span>This is a very beautiful popover, show some love.</span>
@@ -133,7 +138,7 @@ You can change the position of the <Code>Popover</Code> component using the <Cod
     <div className="mb-3 flex gap-3">
       <Popover placement="bottom">
         <PopoverHandler>
-          <Button variant="gradient">Bottom</Button>
+          <Button>Bottom</Button>
         </PopoverHandler>
         <PopoverContent>
           <span>This is a very beautiful popover, show some love.</span>
@@ -141,7 +146,7 @@ You can change the position of the <Code>Popover</Code> component using the <Cod
       </Popover>
       <Popover placement="bottom-start">
         <PopoverHandler>
-          <Button variant="gradient">Bottom Start</Button>
+          <Button>Bottom Start</Button>
         </PopoverHandler>
         <PopoverContent>
           <span>This is a very beautiful popover, show some love.</span>
@@ -149,7 +154,7 @@ You can change the position of the <Code>Popover</Code> component using the <Cod
       </Popover>
       <Popover placement="bottom-end">
         <PopoverHandler>
-          <Button variant="gradient">Bottom End</Button>
+          <Button>Bottom End</Button>
         </PopoverHandler>
         <PopoverContent>
           <span>This is a very beautiful popover, show some love.</span>
@@ -159,7 +164,7 @@ You can change the position of the <Code>Popover</Code> component using the <Cod
     <div className="flex gap-3">
       <Popover placement="left">
         <PopoverHandler>
-          <Button variant="gradient">Left</Button>
+          <Button>Left</Button>
         </PopoverHandler>
         <PopoverContent>
           <span>This is a very beautiful popover, show some love.</span>
@@ -167,7 +172,7 @@ You can change the position of the <Code>Popover</Code> component using the <Cod
       </Popover>
       <Popover placement="left-start">
         <PopoverHandler>
-          <Button variant="gradient">Left Start</Button>
+          <Button>Left Start</Button>
         </PopoverHandler>
         <PopoverContent>
           <span>This is a very beautiful popover, show some love.</span>
@@ -175,7 +180,7 @@ You can change the position of the <Code>Popover</Code> component using the <Cod
       </Popover>
       <Popover placement="left-end">
         <PopoverHandler>
-          <Button variant="gradient">Left End</Button>
+          <Button>Left End</Button>
         </PopoverHandler>
         <PopoverContent>
           <span>This is a very beautiful popover, show some love.</span>
@@ -199,7 +204,7 @@ export default function Example() {
       <div className="mb-3 flex gap-3">
         <Popover placement="top">
           <PopoverHandler>
-            <Button variant="gradient">Top</Button>
+            <Button>Top</Button>
           </PopoverHandler>
           <PopoverContent>
             <span>This is a very beautiful popover, show some love.</span>
@@ -207,7 +212,7 @@ export default function Example() {
         </Popover>
         <Popover placement="top-start">
           <PopoverHandler>
-            <Button variant="gradient">Top Start</Button>
+            <Button>Top Start</Button>
           </PopoverHandler>
           <PopoverContent>
             <span>This is a very beautiful popover, show some love.</span>
@@ -215,7 +220,7 @@ export default function Example() {
         </Popover>
         <Popover placement="top-end">
           <PopoverHandler>
-            <Button variant="gradient">Top End</Button>
+            <Button>Top End</Button>
           </PopoverHandler>
           <PopoverContent>
             <span>This is a very beautiful popover, show some love.</span>
@@ -225,7 +230,7 @@ export default function Example() {
       <div className="mb-3 flex gap-3">
         <Popover placement="right">
           <PopoverHandler>
-            <Button variant="gradient">Right</Button>
+            <Button>Right</Button>
           </PopoverHandler>
           <PopoverContent>
             <span>This is a very beautiful popover, show some love.</span>
@@ -233,7 +238,7 @@ export default function Example() {
         </Popover>
         <Popover placement="right-start">
           <PopoverHandler>
-            <Button variant="gradient">Right Start</Button>
+            <Button>Right Start</Button>
           </PopoverHandler>
           <PopoverContent>
             <span>This is a very beautiful popover, show some love.</span>
@@ -241,7 +246,7 @@ export default function Example() {
         </Popover>
         <Popover placement="right-end">
           <PopoverHandler>
-            <Button variant="gradient">Right End</Button>
+            <Button>Right End</Button>
           </PopoverHandler>
           <PopoverContent>
             <span>This is a very beautiful popover, show some love.</span>
@@ -251,7 +256,7 @@ export default function Example() {
       <div className="mb-3 flex gap-3">
         <Popover placement="bottom">
           <PopoverHandler>
-            <Button variant="gradient">Bottom</Button>
+            <Button>Bottom</Button>
           </PopoverHandler>
           <PopoverContent>
             <span>This is a very beautiful popover, show some love.</span>
@@ -259,7 +264,7 @@ export default function Example() {
         </Popover>
         <Popover placement="bottom-start">
           <PopoverHandler>
-            <Button variant="gradient">Bottom Start</Button>
+            <Button>Bottom Start</Button>
           </PopoverHandler>
           <PopoverContent>
             <span>This is a very beautiful popover, show some love.</span>
@@ -267,7 +272,7 @@ export default function Example() {
         </Popover>
         <Popover placement="bottom-end">
           <PopoverHandler>
-            <Button variant="gradient">Bottom End</Button>
+            <Button>Bottom End</Button>
           </PopoverHandler>
           <PopoverContent>
             <span>This is a very beautiful popover, show some love.</span>
@@ -277,7 +282,7 @@ export default function Example() {
       <div className="flex gap-3">
         <Popover placement="left">
           <PopoverHandler>
-            <Button variant="gradient">Left</Button>
+            <Button>Left</Button>
           </PopoverHandler>
           <PopoverContent>
             <span>This is a very beautiful popover, show some love.</span>
@@ -285,7 +290,7 @@ export default function Example() {
         </Popover>
         <Popover placement="left-start">
           <PopoverHandler>
-            <Button variant="gradient">Left Start</Button>
+            <Button>Left Start</Button>
           </PopoverHandler>
           <PopoverContent>
             <span>This is a very beautiful popover, show some love.</span>
@@ -293,7 +298,7 @@ export default function Example() {
         </Popover>
         <Popover placement="left-end">
           <PopoverHandler>
-            <Button variant="gradient">Left End</Button>
+            <Button>Left End</Button>
           </PopoverHandler>
           <PopoverContent>
             <span>This is a very beautiful popover, show some love.</span>
@@ -308,7 +313,9 @@ export default function Example() {
 
 ---
 
+<DocsTitle href="custom-popover-animation">
 ## Custom Popover Animation
+</DocsTitle>
 
 You can modify the open/close state animation for <Code>Popover</Code> component using the <Code>animate</Code> prop.
 
@@ -320,7 +327,7 @@ You can modify the open/close state animation for <Code>Popover</Code> component
     }}
   >
     <PopoverHandler>
-      <Button variant="gradient">Show Popover</Button>
+      <Button>Show Popover</Button>
     </PopoverHandler>
     <PopoverContent>
       <span>This is a very beautiful popover, show some love.</span>
@@ -344,7 +351,7 @@ export default function Example() {
       }}
     >
       <PopoverHandler>
-        <Button variant="gradient">Show Popover</Button>
+        <Button>Show Popover</Button>
       </PopoverHandler>
       <PopoverContent>
         This is a very beautiful popover, show some love.
@@ -357,9 +364,254 @@ export default function Example() {
 
 ---
 
-## Profile Info Popover
+<DocsTitle href="subscription-popover">
+## Subscription Popover
+</DocsTitle>
 
-<CodePreview id="profile-info-popover" link="popover#profile-info-popover" className="mt-4" component={
+Use this beautiful popover if you want to let the users subscribe easily.
+
+<CodePreview id="subscription-popover" component={
+  <Popover placement="bottom">
+    <PopoverHandler>
+      <Button>Subscribe</Button>
+    </PopoverHandler>
+    <PopoverContent className="w-96">
+      <Typography
+        variant="h6"
+        color="blue-gray"
+        className="mb-6"
+      >
+        Newsletter Subscription
+      </Typography>
+      <div className="flex gap-2">
+        <Input label="Email Address" />
+        <Button variant="gradient">Subscribe</Button>
+      </div>
+    </PopoverContent>
+  </Popover>
+}>
+```jsx
+<Popover placement="bottom">
+  <PopoverHandler>
+    <Button>Subscribe</Button>
+  </PopoverHandler>
+  <PopoverContent className="w-96">
+    <Typography
+      variant="h6"
+      color="blue-gray"
+      className="mb-6"
+    >
+      Newsletter Subscription
+    </Typography>
+    <div className="flex gap-2">
+      <Input label="Email Address" />
+      <Button variant="gradient">Subscribe</Button>
+    </div>
+  </PopoverContent>
+</Popover>
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="contact-popover">
+## Contact Popover
+</DocsTitle>
+
+Use this example of  a popover component to help users get the help they need easier.
+
+<CodePreview id="contact-popover" component={
+  <Popover placement="bottom">
+    <PopoverHandler>
+      <Button>Contact Us</Button>
+    </PopoverHandler>
+    <PopoverContent className="w-72">
+      <div className="flex items-center gap-4 border-b border-blue-gray-50 pb-4 mb-4">
+        <Avatar src="/img/team-4.jpg" alt="tania andrew" />
+        <div>
+          <Typography variant="h6" color="blue-gray">Tania Andrew</Typography>
+          <Typography variant="small" color="gray" className="font-normal">General Manager</Typography>
+        </div>
+      </div>
+      <List className="p-0">
+        <a href="#" className="text-initial">
+          <ListItem>
+            <ListItemPrefix>
+              <SolidIcons.BuildingOffice2Icon className="w-5 h-5" />
+            </ListItemPrefix>
+            ABC Construction
+          </ListItem>
+        </a>
+        <a href="#" className="text-initial">
+          <ListItem>
+            <ListItemPrefix>
+              <SolidIcons.PhoneIcon className="w-5 h-5" />
+            </ListItemPrefix>
+            00 123 456 789
+          </ListItem>
+        </a>
+        <a href="#" className="text-initial">
+          <ListItem>
+            <ListItemPrefix>
+              <SolidIcons.EnvelopeIcon className="w-5 h-5" />
+            </ListItemPrefix>
+            person@example.com
+          </ListItem>
+        </a>
+      </List>
+    </PopoverContent>
+  </Popover>
+}>
+```jsx
+import React from "react";
+import {
+  Popover,
+  PopoverHandler,
+  PopoverContent,
+  Avatar,
+  Button,
+  Typography,
+  List,
+  ListItem,
+  ListItemPrefix
+} from "@material-tailwind/react";
+import {
+  BuildingOffice2Icon,
+  PhoneIcon,
+  EnvelopeIcon
+} from "@heroicons/react/24/solid";
+
+export default function Example() {
+  return (
+    <Popover placement="bottom">
+      <PopoverHandler>
+        <Button>Contact Us</Button>
+      </PopoverHandler>
+      <PopoverContent className="w-72">
+        <div className="flex items-center gap-4 border-b border-blue-gray-50 pb-4 mb-4">
+          <Avatar src="/img/team-4.jpg" alt="tania andrew" />
+          <div>
+            <Typography variant="h6" color="blue-gray">Tania Andrew</Typography>
+            <Typography variant="small" color="gray" className="font-normal">General Manager</Typography>
+          </div>
+        </div>
+        <List className="p-0">
+          <a href="#" className="text-initial">
+            <ListItem>
+              <ListItemPrefix>
+                <SolidIcons.BuildingOffice2Icon className="w-5 h-5" />
+              </ListItemPrefix>
+              ABC Construction
+            </ListItem>
+          </a>
+          <a href="#" className="text-initial">
+            <ListItem>
+              <ListItemPrefix>
+                <SolidIcons.PhoneIcon className="w-5 h-5" />
+              </ListItemPrefix>
+              00 123 456 789
+            </ListItem>
+          </a>
+          <a href="#" className="text-initial">
+            <ListItem>
+              <ListItemPrefix>
+                <SolidIcons.EnvelopeIcon className="w-5 h-5" />
+              </ListItemPrefix>
+              person@example.com
+            </ListItem>
+          </a>
+        </List>
+      </PopoverContent>
+    </Popover>
+  );
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="popover-with-image">
+## Popover with Image
+</DocsTitle>
+
+This example is used to show more information. It contains an image, headline, description, and link.
+
+<CodePreview id="popover-with-image" component={
+  <Popover>
+    <PopoverHandler>
+      <Button>More Info</Button>
+    </PopoverHandler>
+    <PopoverContent className="w-[28rem] p-0 overflow-hidden flex z-[999]">
+      <div className="p-4">
+        <Typography color="blue-gray" className="font-medium mb-2">Material Tailwind</Typography>
+        <Typography variant="small" color="gray" className="font-normal mb-4">
+          Material Tailwind is an easy to use components library for Tailwind CSS and Material Design. It features multiple React and HTML components, all written with Tailwind CSS classes and Material Design guidelines.
+        </Typography>
+        <a href="#" className="inline-block">
+          <Button size="sm" variant="text" className="flex items-center gap-1 capitalize">
+            Read More 
+            <OutlineIcons.ArrowLongRightIcon strokeWidth={2} className="w-3.5 h-3.5" />
+          </Button>
+        </a>
+      </div>
+      <img 
+        src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVhbSUyMGJ1aWxkaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+        alt="image"
+        className="w-1/2 h-full object-cover"
+      />
+    </PopoverContent>
+  </Popover>
+}>
+```jsx
+import {
+  Popover,
+  PopoverHandler,
+  PopoverContent,
+  Button,
+  Typography,
+} from "@material-tailwind/react";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+
+export default function Example() {
+  return (
+    <Popover>
+      <PopoverHandler>
+        <Button>More Info</Button>
+      </PopoverHandler>
+      <PopoverContent className="w-[28rem] p-0 overflow-hidden flex z-[999]">
+        <div className="p-4">
+          <Typography color="blue-gray" className="font-medium mb-2">Material Tailwind</Typography>
+          <Typography variant="small" color="gray" className="font-normal mb-4">
+            Material Tailwind is an easy to use components library for Tailwind CSS and Material Design. It features multiple React and HTML components, all written with Tailwind CSS classes and Material Design guidelines.
+          </Typography>
+          <a href="#" className="inline-block">
+            <Button size="sm" variant="text" className="flex items-center gap-1 capitalize">
+              Read More 
+              <ArrowLongRightIcon strokeWidth={2} className="w-3.5 h-3.5" />
+            </Button>
+          </a>
+        </div>
+        <img 
+          src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVhbSUyMGJ1aWxkaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+          alt="image"
+          className="w-1/2 h-full object-cover"
+        />
+      </PopoverContent>
+    </Popover>
+  )
+}
+```
+</CodePreview>
+
+---
+
+<DocsTitle href="profile-info-popover">
+## Profile Info Popover
+</DocsTitle>
+
+Use this example to help the user find out more information about a profile.
+
+<CodePreview id="profile-info-popover" link="popover#profile-info-popover" component={
   <State initialState={{ open: false }}>
     <Observe>
       {({ setState, open }) => (
@@ -380,7 +632,7 @@ export default function Example() {
                 size="md"
                 variant="circular"
                 src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-                alt="candice wu"
+                alt="tania andrew"
               />
               <Button
                 variant="gradient"
@@ -396,7 +648,7 @@ export default function Example() {
               color="blue-gray"
               className="mb-2 flex items-center gap-2 font-medium"
             >
-              <span>Candice Wu</span> •{" "}
+              <span>Tania Andrew</span> •{" "}
               <a href="#" className="text-sm text-blue-gray-700">
                 @canwu
               </a>
@@ -465,7 +717,7 @@ export default function Example() {
             size="md"
             variant="circular"
             src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-            alt="candice wu"
+            alt="tania andrew"
           />
           <Button
             variant="gradient"
@@ -481,7 +733,7 @@ export default function Example() {
           color="blue-gray"
           className="mb-2 flex items-center gap-2 font-medium"
         >
-          <span>Candice Wu</span> •{" "}
+          <span>Tania Andrew</span> •{" "}
           <a href="#" className="text-sm text-blue-gray-700">
             @canwu
           </a>
@@ -523,7 +775,9 @@ export default function Example() {
 
 ---
 
+<DocsTitle href="popover-with-description">
 ## Popover with Description
+</DocsTitle>
 
 <CodePreview id="popover-with-description" link="popover#popover-with-description" className="mt-4" component={
   <State initialState={{ open: false }}>

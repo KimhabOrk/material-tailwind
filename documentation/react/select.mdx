@@ -28,8 +28,8 @@ related:
     },
   ]
 github: select
-prev: radio-button
-next: switch
+prev: rating-bar
+next: slider
 ---
 
 # Tailwind CSS Select - React
@@ -74,7 +74,9 @@ export default function Example() {
 
 ---
 
+<DocsTitle href="select-variants">
 ## Select Variants
+</DocsTitle>
 
 The <Code>Select</Code> component comes with 3 different variants that you can change it using the <Code>variant</Code> prop.
 
@@ -106,7 +108,7 @@ The <Code>Select</Code> component comes with 3 different variants that you can c
 ```jsx
 import { Select, Option } from "@material-tailwind/react";
 
-export default function Variants() {
+export default function Example() {
   return (
     <div className="flex flex-col w-72 gap-6">
       <Select variant="static" label="Select Version">
@@ -138,7 +140,9 @@ export default function Variants() {
 
 ---
 
+<DocsTitle href="select-sizes">
 ## Select Sizes
+</DocsTitle>
 
 The <Code>Select</Code> component comes with 2 different sizes that you can change it using the <Code>size</Code> prop.
 
@@ -163,7 +167,7 @@ The <Code>Select</Code> component comes with 2 different sizes that you can chan
 ```jsx
 import { Select, Option } from "@material-tailwind/react";
 
-export default function Sizes() {
+export default function Example() {
   return (
     <div className="flex flex-col w-72 gap-6">
       <Select size="md" label="Select Version">
@@ -188,7 +192,9 @@ export default function Sizes() {
 
 ---
 
+<DocsTitle href="select-colors">
 ## Select Colors
+</DocsTitle>
 
 The <Code>Select</Code> component comes with 19 different colors that you can change it using the <Code>color</Code> prop.
 
@@ -220,7 +226,7 @@ The <Code>Select</Code> component comes with 19 different colors that you can ch
 ```jsx
 import { Select, Option } from "@material-tailwind/react";
 
-export default function Colors() {
+export default function Example() {
   return (
     <div className="flex w-72 flex-col gap-6">
       <Select color="blue" label="Select Version">
@@ -252,7 +258,9 @@ export default function Colors() {
 
 ---
 
+<DocsTitle href="select-validations">
 ## Select Validations
+</DocsTitle>
 
 The <Code>Select</Code> component comes with error and success states for performing validations.
 
@@ -277,7 +285,7 @@ The <Code>Select</Code> component comes with error and success states for perfor
 ```jsx
 import { Select, Option } from "@material-tailwind/react";
 
-export default function Validations() {
+export default function Example() {
   return (
     <div className="flex flex-col w-72 gap-6">
       <Select label="Select Version" error>
@@ -302,7 +310,9 @@ export default function Validations() {
 
 ---
 
+<DocsTitle href="custom-select-animation">
 ## Custom Select Animation
+</DocsTitle>
 
 You can modify the open/close state animation for <Code>Select</Code> component using the <Code>animate</Code> prop.
 
@@ -350,7 +360,9 @@ export default function Example() {
 
 ---
 
+<DocsTitle href="disabled-select">
 ## Disabled Select
+</DocsTitle>
 
 A <Code>Select</Code> could be disabled as well, it will help you to prevent user interactions like click or focus over the <Code>Select</Code> component.
 
@@ -386,7 +398,9 @@ export default function Example() {
 
 ---
 
+<DocsTitle href="countries-select">
 ## Countries Select
+</DocsTitle>
 
 See the example below to see how you can create a <Code>Select</Code> component with a list of countries.
 
@@ -401,32 +415,33 @@ import { Select, Option } from "@material-tailwind/react";
 export default function CountriesSelect() {
   const { countries } = useCountries();
 
-  return (
-    <div className="w-72">
-      <Select
-        size="lg"
-        label="Select Country"
-        selected={(element) =>
-          element &&
-          React.cloneElement(element, {
-            className: "flex items-center px-0 gap-2 pointer-events-none",
-          })
-        }
-      >
-        {countries.map(({ name, flags }) => (
-          <Option key={name} value={name} className="flex items-center gap-2">
-            <img
-              src={flags.svg}
-              alt={name}
-              className="h-5 w-5 rounded-full object-cover"
-            />
-            {name}
-          </Option>
-        ))}
-      </Select>
-    </div>
-  );
-}
+return (
+
+<div className="w-72">
+  <Select
+    size="lg"
+    label="Select Country"
+    selected={(element) =>
+      element &&
+      React.cloneElement(element, {
+        className: "flex items-center px-0 gap-2 pointer-events-none",
+      })
+    }
+  >
+    {countries.map(({ name, flags }) => (
+      <Option key={name} value={name} className="flex items-center gap-2">
+        <img
+          src={flags.svg}
+          alt={name}
+          className="h-5 w-5 rounded-full object-cover"
+        />
+        {name}
+      </Option>
+    ))}
+  </Select>
+</div>
+); }
+
 ```
 </CodePreview>
 
